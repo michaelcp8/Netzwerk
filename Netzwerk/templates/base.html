@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+
+{% load staticfiles %}
+<html>
+    <head>  
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+        <title>Netzwerk</title>
+    </head>
+
+    <body style="{% block Background %}background-image: url('{% static "images/portada.jpg" %}'){% endblock %}">
+		<div class="container-fluid">
+			{% block NavigationTop %}
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+			  		<a class="navbar-brand" href="/">Netzwerk</a>
+					</div>
+				</div>
+			</nav>
+			{% endblock %}
+		</div>
+
+			<div class="container-fluid">
+
+				<div class="row">
+
+					<div class="col-md-3 front-login">
+						{% block Left %}
+
+						{% endblock %}
+					</div>
+	
+					<div class="col-md-6 front-login">
+						{% block Center %}
+
+						{% endblock %}
+					</div>
+			
+					<div class="col-md-3 front-login">
+						{% block Right %}
+
+						{% endblock %}
+					</div>
+				</div>       
+			</div>
+
+			<footer>
+				{% block Footer %}
+		      			<p>© Michael Castillo Polo. Diseñado con <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+				{% endblock %}
+			</footer>
+	</body>
+
+  </html> 
